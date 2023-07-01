@@ -464,4 +464,8 @@ input:checked + .slider:before {
 	#dva{
 		margin-top: 5%;
 	}
+
+	#myChart2{
+		display: none;
+	}
 }
