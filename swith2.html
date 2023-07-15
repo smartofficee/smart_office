@@ -10,7 +10,7 @@
     <script src="index.js"></script>
 
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="switch2.css">
     <link rel="stylesheet" href="calendar.css">
 
 
@@ -152,121 +152,183 @@
           document.getElementById('date-time').innerHTML = formattedDate;
           </script>
 
-        <div class="welcome">
-          <div class="row"  style="width: 100%; margin-left: 1%;">
-          <div id="firstt" class="col-md-8 mb-3 mb-lg-0" >
-          <div id="first" class="content rounded-3 p-3" style="border-radius: 20px;">
-            <h1 class="fs-3">Graph</h1>
-            <div class="row" id="row1">
+<div class="welcome">
+  <div id="first" class="content rounded-3 p-3" style="border-radius: 20px;">
+    <h1 class="fs-3">Graph</h1>
+      <section class="statis mt-4 text-center">
+        <div class="row" id="row3">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="box p-3">
+              <i class="uil-eye"></i>
+              <label class="switch">
+                <input type="checkbox" id="l0">
+                <span class="slider round" id="slid"></span>
+              </label>
+              <p class="lead">Room 1</p>
+            </div>
+          </div>
 
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="box p-3">
+              <i class="uil-user"></i>
+              <label class="switch">
+                <input type="checkbox" id="l1">
+                <span class="slider round" id="slid"></span>
+              </label>
+              <p class="lead">Room 2</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+            <div class="box p-3">
+              <i class="uil-shopping-cart"></i>
+              <label class="switch">
+                <input type="checkbox" id="l2">
+                <span class="slider round" id="slid"></span>
+              </label>
+              <p class="lead">Room 3</p>
+            </div>
+          </div>
+          
+        </div>
 
-              <div id="val" style="height: 100%;">
-                <div class="temp_all">
-                  <div class="temp">
-                    <img src="temp.svg" alt="">
-                  </div>
-                  <div class="slovo2" style="margin-left: auto; margin-right: 10%;">
-                    <div style="display: flex; height: 40%; font-size: 25px;">
-                      <p id="temperature-data" style="margin-left: auto;">0</p>
-                      <p style="margin-left: auto;"><sup><small>o</small></sup>C</p>
-                    </div>
-                    <h5 style="font-size: 125%;">Temperature</h5>
-                  </div>
-                </div>
-              </div>
-
-              <div id="val" style="height: 100%;">
-                <div class="hum_all">
-                  <div class="hum">
-                    <img src="humidity.svg" alt="">
-                  </div>
-                  <div class="slovo2" style="margin-left: auto; margin-right: 10%;">
-                    <div style="display: flex; height: 40%; font-size: 25px;">
-                      <p id="humidity-data" style="margin-left: auto;">0</p>
-                      <p style="margin-left: auto;">%</p>
-                    </div>
-                    <h5>Humidity</h5>
-                  </div>
-                </div>
-              </div>
-
-              <div id="val" style="height: 100%;">
-                <div class="press_all">
-                  <div class="press">
-                    <img src="050-barometer.svg" alt="">
-                  </div>
-
-                  <div class="slovo2" style="margin-left: auto; margin-right: 10%;">
-                    <div style="display: flex; height: 40%; font-size: 25px;">
-                      <p id="pressure-data" style="margin-left: auto;">000</p>
-                      <!-- <p style="margin-left: 78%;"></p> -->
-                    </div>
-                    <h5>Pressure</h5>
-                  </div>
-                  <!-- <div>
-                    <p id="pressure-data">0</p>
-                    <h5>Pressure</h5>
-                  </div> -->
-                </div>
-              </div>
+        <div class="row" id="row3" style="margin-top: 3%;">
+          <div class="col-md-6 col-lg-3">
+            <div class="box p-3">
+              <i class="uil-feedback"></i>
+              <label class="switch">
+                <input type="checkbox" id="l3">
+                <span class="slider round" id="slid"></span>
+              </label>
+              <p class="lead">Room 4</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="box p-3">
+              <i class="uil-eye"></i>
+              <label class="switch">
+                <input type="checkbox" id="l4">
+                <span class="slider round" id="slid"></span>
+              </label>
+              <p class="lead">Room 5</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="box p-3">
+              <i class="uil-user"></i>
+              <label class="switch">
+                <input type="checkbox" id="l5">
+                <span class="slider round" id="slid"></span>
+              </label>
+              <p class="lead">Room 6</p>
             </div>
           </div>
         </div>
-          <div id="secondd"  class="col-md-4 mb-4 mb-lg-0" style="align-items: center;">
-          <div class="content rounded-3 p-3" style="border-radius: 20px;">
-            <h1 class="fs-3" id="fs2">Welcome to Smart-Techno</h1>
-
-              <div class="row" id="row2">
-                <div id="val2" style="height: 100%;">
-                  <div class="co2_all" style="margin-top: -1%;">
-                    <div class="co2">
-                      <img id="img3" style="height: 79%;" src="co2-svgrepo-com.svg" alt="">
-                    </div>  
-                    <div class="slovo3" >
-                      <div style="display: flex; height: 40%; font-size: 25px;">
-                        <p id="humidity-data">555</p>
-                        <p>PPM</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            
 
 
-
-
-              <div class="row" id="row2">
-                <div id="val2" style="height: 100%;">
-                  <div class="tvoc_all" style="margin-top: 1%;">
-
-                    <div class="co2">
-                      <img id="img3" style="height: 70%;" src="tvoc.svg" alt="">
-                    </div>
-
-                    <div class="slovo3" style="margin-left: 70%;">
-                      <div style="display: flex; height: 40%; font-size: 25px;">
-                        <p id="humidity-data" style="position: absolute; margin-left: 1%;"></p>
-                        <p style="margin-left: 70%;">%</p>
-                      </div>
-                      <h5>TVOC</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="row" id="row3" style="margin-top: 3%;">
+          <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+            <div class="box p-3">
+              <i class="uil-shopping-cart"></i>
+              <label class="switch">
+                <input type="checkbox" id="l6">
+                <span class="slider round" id="slid"></span>
+              </label>
+              <p class="lead">Room 7</p>
             </div>
-
-              
           </div>
-
+          <div class="col-md-6 col-lg-3">
+            <div class="box p-3">
+              <i class="uil-feedback"></i>
+              <label class="switch">
+                <input type="checkbox" id="l7">
+                <span class="slider round" id="slid"></span>
+              </label>
+              <p class="lead">Room 8</p>
+            </div>
           </div>
-          
-          
-
-
-
         </div>
+      </section>
+
+    
+  </div>
+
+  <div id="second" class="content rounded-3 p-3" style="border-radius: 20px;">
+    <h1 class="fs-3">Welcome to Smart-Techno</h1>
+    <section class="statis mt-4 text-center">
+      <div class="row" id="row3">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-eye"></i>
+            <label class="switch">
+              <input type="checkbox" id="l0">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 1</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-user"></i>
+            <label class="switch">
+              <input type="checkbox" id="l1">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 2</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+          <div class="box p-3">
+            <i class="uil-shopping-cart"></i>
+            <label class="switch">
+              <input type="checkbox" id="l2">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 3</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="row" id="row3" style="margin-top: 3%;">
+        <div class="col-md-6 col-lg-3">
+          <div class="box p-3">
+            <i class="uil-feedback"></i>
+            <label class="switch">
+              <input type="checkbox" id="l3">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 4</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-eye"></i>
+            <label class="switch">
+              <input type="checkbox" id="l4">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 5</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-user"></i>
+            <label class="switch">
+              <input type="checkbox" id="l5">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 6</p>
+          </div>
+        </div>
+      </div>
+
+
+      
+    </section>
+
+  </div>
+</div>
 
         
         

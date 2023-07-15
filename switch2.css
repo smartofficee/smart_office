@@ -212,8 +212,6 @@ body {
 }
 .welcome {
 	position: relative;
-	/* margin-left: 2%; */
-	/* width: 67%; */
 	color: var(--dk-gray-300);
 	display: flex;
 }
@@ -229,9 +227,9 @@ body {
 	/* width: 63%; */
 }
 
-/* .wel div{
+.wel div{
 	margin: 2%;
-} */
+}
 
 /* #second{
 	width: 30%;
