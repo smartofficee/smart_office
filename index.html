@@ -6,205 +6,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-  
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="index.js"></script>
 
 
-    <script src="rezerv.js"></script>
-    <link rel="stylesheet" href="rezerv.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="calendar.css">
+
+
   </head>
 
   <body>
+
     <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
       <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
-    
-      <div class="search position-relative text-center px-4 py-3 mt-2">
-        <input type="text" class="form-control w-100 border-0 bg-transparent" placeholder="Search here">
-        <i class="fa fa-search position-absolute d-block fs-6"></i>
-      </div>
-    
       <ul class="categories list-unstyled">
-        <li class="has-dropdown">
-          <i class="uil-estate fa-fw"></i><a href="#">Dashboard</a>
+        <li>
+          <a href="#"><img class="one" src="1.svg" alt=""></a>
         </li>
-        <li class="">
-          <i class="uil-folder"></i><a href="#">Office</a>
+        <li>
+          <a href="#"><img class="one" src="2.svg" alt=""></a>
         </li>
-        <li class="has-dropdown">
-          <i class="uil-calendar-alt"></i><a href="#">Calender</a>
+        <li>
+          <a href="#"><img class="one" src="3.svg" alt=""></a>
         </li>
-        <li class="has-dropdown">
-          <i class="uil-envelope-download fa-fw"></i><a href="#">Home</a>
-          
+        <li>
+          <a href="#"><img class="one" src="4.svg" alt=""></a>
         </li>
         
-        <li class="">
-          <i class="uil-map-marker"></i><a href="#"> LogOut</a>
+        <li>
+          <a href="#"><img class="log" src="logout.svg" alt=""></a>
         </li>
       </ul>
     </aside>
     
     <section id="wrapper">
+      <div class="black">
+      </div>
       
-    
-      <div class="p-4">
-        <div class="welcome">
-          <div class="content rounded-3 p-3" style="border-radius: 20px;">
-            <h1 class="fs-3">Welcome to Smart-Techno</h1>
-            <p class="mb-0">Hello, welcome to our Technopark!</p>
+      <div class="nav" style="margin-left: 5%; width: 57%;">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <img src="Vector (4).svg" alt="">
+            <span id="date-time"></span>
           </div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
-        <section class="charts mt-4">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="chart-container rounded-2 p-3" style="background-color: black; border-radius: 20px;">
-                <h3 class="fs-6 mb-3"><div class="title">BME-280</div></h3>
-                <div class="mainContainer">
-                  <div class="expenses">  
-                    <div class="resource">
-                      <div class="rname">Humidity</div>
-                      <div class="val" id="humidity-data" style="background-color:rgba(52, 152, 219,1.0)"><span class="units"></span></div>
-                    </div>
+        
+        
+        <div class="nav-links" style="margin-left: auto;"  >
+          <img src="Vector (1).svg" alt="">
+          <img src="Vector (2).svg" alt="">
+          <img src="Vector (3).svg" alt="">
+        </div>
+      </div>
+      <style>
+        .nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > img {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50%;
+    height: 40%;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25%;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    /* top: 50px; */
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  
+}
+      </style>
+      
+    
+
+      <div class="p-4">
+        <span id="date-time"></span>
+
+        <script>
+          var dt = new Date();
+          var options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+          var formattedDate = dt.toLocaleDateString('en-US', options);
+          document.getElementById('date-time').innerHTML = formattedDate;
+          </script>
+
+        <div class="welcome">
+          <div class="row"  style="width: 100%; margin-left: 1%;">
+          <div id="firstt" class="col-md-8 mb-4 mb-lg-0" >
+          <div id="first" class="content rounded-3 p-3" style="border-radius: 20px;">
+            <h1 class="fs-3">Graph</h1>
+            <div class="row" id="row1">
+
+
+              <div id="val" style="height: 100%;">
+                <div class="temp_all">
+                  <div class="temp">
+                    <img src="temp.svg" alt="">
                   </div>
-                  <div class="expenses">
-                    <div class="resource">
-                      <div class="rname">Pressure</div>
-                      <div class="val" id="pressure-data" style="background-color:rgba(52, 152, 219,1.0)"><span class="units"></span></div>
+                  <div class="slovo2" style="margin-left: auto; margin-right: 10%;">
+                    <div style="display: flex; height: 40%; font-size: 25px;">
+                      <p id="temperature-data" style="margin-left: auto;">0</p>
+                      <p style="margin-left: auto;"><sup><small>o</small></sup>C</p>
                     </div>
-                  </div>
-                  <div class="expenses">
-                    <div class="resource">
-                      <div class="rname">Temperature</div>
-                      <div class="val" id="temperature-data" style="background-color:rgba(52, 152, 219,1.0)"><span class="units"></span></div>
-                    </div>
+                    <h5 style="font-size: 125%;">Temperature</h5>
                   </div>
                 </div>
-                <!-- <canvas id="myChart"></canvas> -->
               </div>
-            </div>
-            
-            <div class="col-lg-6" id="dva">
-              <div class="chart-container rounded-2 p-3" style="background-color: black; border-radius: 20px;">
-                <h3 class="fs-6 mb-3"><div class="title">CCS-811</div></h3>
-                <div class="expenses">  
-                  <div class="resource">
-                    <div class="rname">CO2</div>
-                    <div class="val"  id="co2-data" style="background-color:rgba(52, 152, 219,1.0)"><span class="units"></span></div>
+
+              <div id="val" style="height: 100%;">
+                <div class="hum_all">
+                  <div class="hum">
+                    <img src="humidity.svg" alt="">
+                  </div>
+                  <div class="slovo2" style="margin-left: auto; margin-right: 10%;">
+                    <div style="display: flex; height: 40%; font-size: 25px;">
+                      <p id="humidity-data" style="margin-left: auto;">0</p>
+                      <p style="margin-left: auto;">%</p>
+                    </div>
+                    <h5>Humidity</h5>
                   </div>
                 </div>
-                <div class="expenses">
-                  <div class="resource">
-                    <div class="rname">TVOC</div>
-                    <div class="val" id="tvoc-data" style="background-color:rgba(52, 152, 219,1.0)"><span class="units"></span></div>
+              </div>
+
+              <div id="val" style="height: 100%;">
+                <div class="press_all">
+                  <div class="press">
+                    <img src="050-barometer.svg" alt="">
                   </div>
+
+                  <div class="slovo2" style="margin-left: auto; margin-right: 10%;">
+                    <div style="display: flex; height: 40%; font-size: 25px;">
+                      <p id="pressure-data" style="margin-left: auto;">000</p>
+                      <!-- <p style="margin-left: 78%;"></p> -->
+                    </div>
+                    <h5>Pressure</h5>
+                  </div>
+                  <!-- <div>
+                    <p id="pressure-data">0</p>
+                    <h5>Pressure</h5>
+                  </div> -->
                 </div>
-                <canvas style="height: 80px;" id="myChart2"></canvas>
               </div>
             </div>
           </div>
-        </section>
-    
-    
-        <section class="statis mt-4 text-center">
-          <div class="row">
-            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-              <div class="box p-3">
-                <i class="uil-eye"></i>
-                <label class="switch">
-                  <input type="checkbox" id="l0">
-                  <span class="slider round" id="slid"></span>
-                </label>
-                <p class="lead">Room 1</p>
+        </div>
+          <div id="secondd"  class="col-md-4 mb-4 mb-lg-0" style="align-items: center;">
+          <div class="content rounded-3 p-3" style="border-radius: 20px;">
+            <h1 class="fs-3" id="fs2">Welcome to Smart-Techno</h1>
+
+              <div class="row" id="row2">
+                <div id="val2" style="height: 100%;">
+                  <div class="co2_all" style="margin-top: -1%;">
+                    <div class="co2">
+                      <img id="img3" style="height: 79%;" src="co2-svgrepo-com.svg" alt="">
+                    </div>  
+                    <div class="slovo3" >
+                      <div style="display: flex; height: 40%; font-size: 25px;">
+                        <p id="humidity-data">555</p>
+                        <p>PPM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            
+
+
+
+
+              <div class="row" id="row2">
+                <div id="val2" style="height: 100%;">
+                  <div class="tvoc_all" style="margin-top: 1%;">
+
+                    <div class="co2">
+                      <img id="img3" style="height: 70%;" src="tvoc.svg" alt="">
+                    </div>
+
+                    <div class="slovo3" style="margin-left: 70%;">
+                      <div style="display: flex; height: 40%; font-size: 25px;">
+                        <p id="humidity-data" style="position: absolute; margin-left: 1%;"></p>
+                        <p style="margin-left: 70%;">%</p>
+                      </div>
+                      <h5>TVOC</h5>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-              <div class="box p-3">
-                <i class="uil-user"></i>
-                <label class="switch">
-                  <input type="checkbox" id="l1">
-                  <span class="slider round" id="slid"></span>
-                </label>
-                <p class="lead">Room 2</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-              <div class="box p-3">
-                <i class="uil-shopping-cart"></i>
-                <label class="switch">
-                  <input type="checkbox" id="l2">
-                  <span class="slider round" id="slid"></span>
-                </label>
-                <p class="lead">Room 3</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="box p-3">
-                <i class="uil-feedback"></i>
-                <label class="switch">
-                  <input type="checkbox" id="l3">
-                  <span class="slider round" id="slid"></span>
-                </label>
-                <p class="lead">Room 4</p>
-              </div>
-            </div>
+
+              
           </div>
 
-          <div class="row" style="margin-top: 3%;">
-            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-              <div class="box p-3">
-                <i class="uil-eye"></i>
-                <label class="switch">
-                  <input type="checkbox" id="l4">
-                  <span class="slider round" id="slid"></span>
-                </label>
-                <p class="lead">Room 5</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-              <div class="box p-3">
-                <i class="uil-user"></i>
-                <label class="switch">
-                  <input type="checkbox" id="l5">
-                  <span class="slider round" id="slid"></span>
-                </label>
-                <p class="lead">Room 6</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-              <div class="box p-3">
-                <i class="uil-shopping-cart"></i>
-                <label class="switch">
-                  <input type="checkbox" id="l6">
-                  <span class="slider round" id="slid"></span>
-                </label>
-                <p class="lead">Room 7</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="box p-3">
-                <i class="uil-feedback"></i>
-                <label class="switch">
-                  <input type="checkbox" id="l7">
-                  <span class="slider round" id="slid"></span>
-                </label>
-                <p class="lead">Room 8</p>
-              </div>
-            </div>
           </div>
-        </section>
-    
-        <!-- <section class="charts mt-4">
-          <div class="chart-container p-3" style="background-color: black; border-radius: 20px;">
-            <h3 class="fs-6 mb-3">Chart title number three</h3>
-            <div style="height: 300px">
-              <canvas id="chart3" width="100%"></canvas>
-            </div>
-          </div>
-        </section> -->
+          
+          
+
+
+
+        </div>
+
+        
+        
+        <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>  
       </div>
     </section>
+
+  
 
 
 
@@ -303,11 +381,111 @@ i,i::before{
 
 
   </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    
+  </script>
+
+
+
+
+
+
+
+
+
+
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
   
 
   <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const apiSwitch = document.getElementById("l0");
   var firebaseConfig = {
     apiKey: "AIzaSyA3txSt2Tm0q4XByth4ligkMqmsaWF7xuc",
@@ -324,350 +502,39 @@ i,i::before{
   // Reference to the Firebase Realtime Database
   var database = firebase.database();
 
-  function updateSwitch() {
-    // Reference to the 'zero' value in the Firebase database
-    var firebaseRef = database.ref("master-1/relay/0");
-  
-    firebaseRef.once("value")
-      .then(snapshot => {
-        var zero = snapshot.val();
-      
-        if (zero === 0) {
-          apiSwitch.checked = true;
-        } else {
-          apiSwitch.checked = false;
-        }
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
 
-  updateSwitch();
 
-  apiSwitch.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/0");
-    var value = this.checked ? 0 : 1;
-  
-    firebaseRef.set(value)
-      .then(() => console.log("Data successfully updated"))
-      .catch(error => console.error("Error updating data:", error));
-  });
 
-  setInterval(updateSwitch, 1000);
 
 
-//   firebase.initializeApp(firebaseConfig);
 
 
-// function updateSwitch() {
-//   const firebaseRef = firebase.database().ref("master-1/relay/0");
 
-//   firebaseRef.once("value")
-//     .then(snapshot => {
-//       const zero = snapshot.val();
-
-//       if (zero === 1) {
-//         apiSwitch.checked = true;
-//       } else {
-//         apiSwitch.checked = false;
-//       }
-//     })
-//     .catch(error => console.error("Error fetching data:", error));
-// }
-
-// updateSwitch();
-
-// apiSwitch.addEventListener("change", function() {
-//   const firebaseRef = firebase.database().ref("master-1/relay/0");
-//   const value = this.checked ? 1 : 0;
-
-//   firebaseRef.set(value)
-//     .then(() => {
-//       console.log("Data successfully updated");
-//       saveSwitchStatus(value); // Сохранение информации о переключателе в Firestore
-//     })
-//     .catch(error => console.error("Error updating data:", error));
-// });
-
-// function saveSwitchStatus(value) {
-//   const firestore = firebase.firestore();
-//   const switchesCollection = firestore.collection("0");
-
-//   const currentTime = new Date().toISOString();
-
-//   switchesCollection.add({
-//     value: value,
-//     timestamp: currentTime
-//   })
-//     .then(() => console.log("Switch status saved to Firestore"))
-//     .catch(error => console.error("Error saving switch status:", error));
-// }
-
-// setInterval(updateSwitch, 1000);
-
-
-
-
-
-  
-
-
-
-  const apiSwitch1 = document.getElementById("l1");
-  function updateSwitch1() {
-    // Reference to the 'zero' value in the Firebase database
-    var firebaseRef = database.ref("master-1/relay/1");
-  
-    firebaseRef.once("value")
-      .then(snapshot => {
-        var zero = snapshot.val();
-      
-        if (zero === 0) {
-          apiSwitch1.checked = true;
-        } else {
-          apiSwitch1.checked = false;
-        }
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
-
-  updateSwitch1();
-
-  apiSwitch1.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/1");
-    var value = this.checked ? 0 : 1;
-  
-    firebaseRef.set(value)
-      .then(() => console.log("Data successfully updated"))
-      .catch(error => console.error("Error updating data:", error));
-  });
-
-  setInterval(updateSwitch1, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  const apiSwitch2 = document.getElementById("l2");
-  function updateSwitch2() {
-    // Reference to the 'zero' value in the Firebase database
-    var firebaseRef = database.ref("master-1/relay/2");
-  
-    firebaseRef.once("value")
-      .then(snapshot => {
-        var zero = snapshot.val();
-      
-        if (zero === 0) {
-          apiSwitch2.checked = true;
-        } else {
-          apiSwitch2.checked = false;
-        }
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
-  updateSwitch2();
-  apiSwitch2.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/2");
-    var value = this.checked ? 0 : 1;
-  
-    firebaseRef.set(value)
-      .then(() => console.log("Data successfully updated"))
-      .catch(error => console.error("Error updating data:", error));
-  });
-
-  setInterval(updateSwitch2, 1000);
-
-
-
-
-
-  const apiSwitch3 = document.getElementById("l3");
-  function updateSwitch3() {
-    // Reference to the 'zero' value in the Firebase database
-    var firebaseRef = database.ref("master-1/relay/3");
-  
-    firebaseRef.once("value")
-      .then(snapshot => {
-        var zero = snapshot.val();
-      
-        if (zero === 0) {
-          apiSwitch3.checked = true;
-        } else {
-          apiSwitch3.checked = false;
-        }
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
-  updateSwitch3();
-  apiSwitch3.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/3");
-    var value = this.checked ? 0 : 1;
-  
-    firebaseRef.set(value)
-      .then(() => console.log("Data successfully updated"))
-      .catch(error => console.error("Error updating data:", error));
-  });
-
-  setInterval(updateSwitch3, 1000);
-
-
-
-
-  const apiSwitch4 = document.getElementById("l4");
-  function updateSwitch4() {
-    // Reference to the 'zero' value in the Firebase database
-    var firebaseRef = database.ref("master-1/relay/4");
-  
-    firebaseRef.once("value")
-      .then(snapshot => {
-        var zero = snapshot.val();
-      
-        if (zero === 0) {
-          apiSwitch4.checked = true;
-        } else {
-          apiSwitch4.checked = false;
-        }
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
-  updateSwitch4();
-  apiSwitch4.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/4");
-    var value = this.checked ? 0 : 1;
-  
-    firebaseRef.set(value)
-      .then(() => console.log("Data successfully updated"))
-      .catch(error => console.error("Error updating data:", error));
-  });
-
-  setInterval(updateSwitch4, 1000);
-
-
-  const apiSwitch5 = document.getElementById("l5");
-  function updateSwitch5() {
-    // Reference to the 'zero' value in the Firebase database
-    var firebaseRef = database.ref("master-1/relay/5");
-  
-    firebaseRef.once("value")
-      .then(snapshot => {
-        var zero = snapshot.val();
-      
-        if (zero === 0) {
-          apiSwitch5.checked = true;
-        } else {
-          apiSwitch5.checked = false;
-        }
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
-  updateSwitch5();
-  apiSwitch5.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/5");
-    var value = this.checked ? 0 : 1;
-  
-    firebaseRef.set(value)
-      .then(() => console.log("Data successfully updated"))
-      .catch(error => console.error("Error updating data:", error));
-  });
-
-  setInterval(updateSwitch5, 1000);
-
-
-
-
-  const apiSwitch6 = document.getElementById("l6");
-  function updateSwitch6() {
-    // Reference to the 'zero' value in the Firebase database
-    var firebaseRef = database.ref("master-1/relay/6");
-  
-    firebaseRef.once("value")
-      .then(snapshot => {
-        var zero = snapshot.val();
-      
-        if (zero === 0) {
-          apiSwitch6.checked = true;
-        } else {
-          apiSwitch6.checked = false;
-        }
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
-  updateSwitch6();
-  apiSwitch6.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/6");
-    var value = this.checked ? 0 : 1;
-  
-    firebaseRef.set(value)
-      .then(() => console.log("Data successfully updated"))
-      .catch(error => console.error("Error updating data:", error));
-  });
-
-  setInterval(updateSwitch6, 1000);
-
-
-  const apiSwitch7 = document.getElementById("l7");
-  function updateSwitch7() {
-    // Reference to the 'zero' value in the Firebase database
-    var firebaseRef = database.ref("master-1/relay/7");
-  
-    firebaseRef.once("value")
-      .then(snapshot => {
-        var zero = snapshot.val();
-      
-        if (zero === 0) {
-          apiSwitch7.checked = true;
-        } else {
-          apiSwitch7.checked = false;
-        }
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
-  updateSwitch7();
-  apiSwitch7.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/7");
-    var value = this.checked ? 0 : 1;
-  
-    firebaseRef.set(value)
-      .then(() => console.log("Data successfully updated"))
-      .catch(error => console.error("Error updating data:", error));
-  });
-
-  setInterval(updateSwitch7, 1000);
-
-
-
-
-
-const refPath = 'modem-1/CCS-811';
+const refPath = 'Modem-1/BME-280-1';
 const realtimeRef = firebase.database().ref(refPath);
 
 // Функция для отображения данных на HTML-странице
-function displayData(co2, tvoc) {
-  const co2Container = document.getElementById('co2-data');
-  const tvocContainer = document.getElementById('tvoc-data');
-  co2Container.textContent = co2;
-  tvocContainer.textContent = tvoc;
+function displayData(humidity, pressure, temperature) {
+  const humidityContainer = document.getElementById('humidity-data');
+  const pressureContainer = document.getElementById('pressure-data');
+  const temperatureContainer = document.getElementById('temperature-data');
+  humidityContainer.textContent = humidity;
+  pressureContainer.textContent = pressure;
+  temperatureContainer.textContent = temperature;
 }
 
 
 function updateData() {
 // Слушатель события изменения значения в Realtime Database
 realtimeRef.on('value', (snapshot) => {
-  const co2 = snapshot.child('co2').val();
-  const tvoc = snapshot.child('tvoc').val();
-  console.log('co2:', co2);
-  console.log('tvoc:', tvoc);
-  displayData(co2, tvoc);
+  const humidity = snapshot.child('humidity').val();
+  const pressure = snapshot.child('pressure').val();
+  const temperature = snapshot.child('temperature').val();
+
+  console.log('humidity:', humidity);
+  console.log('pressure:', pressure);
+  console.log('temperature:', temperature);
+  displayData(humidity, pressure, temperature);
 }, (error) => {
   console.error('Error:', error);
 });
@@ -679,17 +546,22 @@ setInterval(updateData, 1000);
 
 
 
-const refPath1 = 'modem-1/BME-280';
+
+
+
+
+
+
+const refPath1 = 'modem-2/BME-280';
 const realtimeRef1 = firebase.database().ref(refPath1);
 
-// Функция для отображения данных на HTML-странице
-function displayData2(humidity, pressure, temperature) {
-  const humidityContainer = document.getElementById('humidity-data');
-  const pressureContainer = document.getElementById('pressure-data');
-  const temperatureContainer = document.getElementById('temperature-data');
-  humidityContainer.textContent = humidity;
-  pressureContainer.textContent = pressure;
-  temperatureContainer.textContent = temperature;
+function displayData2(humidity2, pressure2, temperature2) {
+  const humidityContainer2 = document.getElementById('humidity-data2');
+  const pressureContainer2 = document.getElementById('pressure-data2');
+  const temperatureContainer2 = document.getElementById('temperature-data2');
+  humidityContainer2.textContent = humidity2;
+  pressureContainer2.textContent = pressure2;
+  temperatureContainer2.textContent = temperature2;
 
 }
 
@@ -697,19 +569,92 @@ function displayData2(humidity, pressure, temperature) {
 function updateData2() {
 // Слушатель события изменения значения в Realtime Database
 realtimeRef1.on('value', (snapshot) => {
-  const humidity = snapshot.child('humidity').val();
-  const pressure = snapshot.child('pressure').val();
-  const temperature = snapshot.child('temperature').val();
+  const humidity2 = snapshot.child('humidity').val();
+  const pressure2 = snapshot.child('pressure').val();
+  const temperature2 = snapshot.child('temperature').val();
 
-  console.log('humidity:', humidity);
-  console.log('pressure:', pressure);
-  console.log('temperature:', temperature);
-  displayData2(humidity, pressure, temperature);
+  console.log('humidity:', humidity2);
+  console.log('pressure:', pressure2);
+  console.log('temperature:', temperature2);
+  displayData2(humidity2, pressure2, temperature2);
 }, (error) => {
   console.error('Error:', error);
 });
 }
 setInterval(updateData2, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const today = new Date();
+const sevenDaysAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000); // Subtract 7 days in milliseconds
+
+const temperatureRef = db.collection('modem-1');
+const query = temperatureRef.where('timestamp', '>=', sevenDaysAgo);
+
+query.get()
+  .then((querySnapshot) => {
+    const temperatureData = [];
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      temperatureData.push({
+        date: data.timestamp.toDate(),
+        temperature: data.temperature
+      });
+    });
+
+    // Format the data for the graph library (assuming Chart.js)
+    const labels = temperatureData.map((data) => data.date.toDateString());
+    const temperatures = temperatureData.map((data) => data.temperature);
+
+    // Create a graph using Chart.js
+    const ctx = document.getElementById('temperatureGraph').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Temperature',
+          data: temperatures,
+          borderColor: 'blue',
+          fill: false
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            type: 'time',
+            time: {
+              unit: 'day',
+              displayFormats: {
+                day: 'MMM D'
+              }
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Temperature (°C)'
+            }
+          }
+        }
+      }
+    });
+  })
+  .catch((error) => {
+    console.log('Error getting temperature data:', error);
+  });
 
   </script>
 

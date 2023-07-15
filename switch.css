@@ -13,8 +13,8 @@
 	--dk-dark-bg: #313348;
 	--dk-darker-bg: black;
 	--navbar-bg-color: #6f6486;
-	--sidebar-bg-color: #252636;
-	--sidebar-width: 250px;
+	--sidebar-bg-color: #1E1E1E;
+	--sidebar-width: 110px;
 }
 
 * {
@@ -29,9 +29,19 @@ body {
 	font-size: .925rem;
 }
 
+.black{
+  border-radius: 20px;
+  width: 93%;
+  height: 80%;
+  background-color: var(--sidebar-bg-color);
+  position: absolute;
+  margin-top: 10%;
+}
+
 #wrapper {
   /* background-color:rgb(29, 171, 214); */
-  background: linear-gradient(#62bded, #148ed5);
+  /* background: linear-gradient(#62bded, #148ed5); */
+  background-color: #446B5C;
 	margin-left: var(--sidebar-width);
 	transition: all .3s ease-in-out;
 }
@@ -41,10 +51,17 @@ body {
 }
 
 
-
 .box{
   background-color: rgba(255, 104, 56, 1);
+  width: 130%;
+  height: 85%;
 }
+
+
+
+/* .box{
+  background-color: rgba(255, 104, 56, 1);
+} */
 
 
 
@@ -109,7 +126,7 @@ body {
 	color: var(--dk-gray-500);
 }
 
-.sidebar ul > li.has-dropdown > a:after {
+.sidebar ul > li.has-dropdown > {
 	content: '\eb3a';
 	font-family: unicons-line;
 	font-size: 1rem;
@@ -161,9 +178,66 @@ body {
 /** --------------------------------
  -- welcome
 -------------------------------- */
-.welcome {
-	color: var(--dk-gray-300);
+.fs-3{
+	font-size: 170%;
+	padding: 3% 0% 0% 7%;
 }
+.welcome {
+  position: relative;
+	margin-top: 3.5%;
+	/* margin-left: 2%; */
+	/* width: 67%; */
+	color: var(--dk-gray-300);
+	display: flex;
+}
+
+.welcome div{
+	margin-left: 2%;
+}
+
+#first{
+	height: 43em;
+	width: 47%;
+}
+
+.wel div{
+	margin: 2%;
+}
+
+#second{
+	width: 47%;
+}
+
+#val{
+	background-color:#2196F3;
+}
+
+
+#row1 div{
+	margin-top: 3%;
+	margin-left: 5%;
+	height: 100px;
+}
+
+#row2 div{
+	margin-top: 3%;
+	margin-left: 5%;
+	height: 100px;
+}
+
+#row3{
+  width: 109%;
+  
+}
+
+#row3 div{
+  width: 109%;
+}
+
+
+
+
+
 
 .welcome .content {
 	/* background-color: var(--dk-dark-bg); */
@@ -243,13 +317,12 @@ body {
 .statis .box {
 	position: relative;
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: 20px;
 }
 
 .statis .box h3:after {
 	content: "";
 	height: 2px;
-	width: 70%;
 	margin: auto;
 	background-color: rgba(255, 255, 255, 0.12);
 	display: block;
@@ -258,13 +331,11 @@ body {
 
 .statis .box i {
 	position: absolute;
-	height: 70px;
-	width: 70px;
+	height: 90px;
+	width: 85px;
 	font-size: 22px;
 	padding: 15px;
-	top: -25px;
 	left: -25px;
-	background-color: rgba(255, 255, 255, 0.15);
 	line-height: 60px;
 	text-align: right;
 	border-radius: 50%;
@@ -397,8 +468,8 @@ body {
   position: relative;
   display: inline-block;
 	margin-top: 5%;
-  width: 60px;
-  height: 34px;
+  width: 70px;
+  height: 35px;
 }
 
 /* Hide default HTML checkbox */
@@ -409,6 +480,8 @@ body {
 }
 
 /* The slider */
+
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -444,7 +517,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  transform: translateX(35px);
 }
 
 /* Rounded sliders */
@@ -456,7 +529,14 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.tire{
+	display: none;
+}
+
 @media (max-width: 767px){
+	.tire{
+		display: inline;
+	}
 	.sidebar{
 		display: none;
 	}
@@ -468,4 +548,5 @@ input:checked + .slider:before {
 	#myChart2{
 		display: none;
 	}
+
 }
