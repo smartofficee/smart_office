@@ -241,13 +241,13 @@ body {
 	
 	width: 27%;
 	/* background-color:#2196F3; */
-	background-color: #c93f16;
+	background-color: #f14c1a;
 	border-radius: 12px;
 }
 
 #val2{
 	display: flex;
-	background-color:#FF6838;
+	background-color:#f14c1a;
 	border-radius: 12px;
 	width: 87%;
 }
