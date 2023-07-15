@@ -241,7 +241,7 @@ body {
 	
 	width: 27%;
 	/* background-color:#2196F3; */
-	background-color: #FF6838;
+	background-color: #c93f16;
 	border-radius: 12px;
 }
 
@@ -597,10 +597,13 @@ input:checked + .slider:before {
 
 .hum_all{
 	display: flex;
+	padding-top: 3%;
 }
+
 
 .temp_all{
 	display: flex;
+	padding-top: 3%;
 }
 
 .co2_all{
@@ -613,7 +616,8 @@ input:checked + .slider:before {
 }
 
 .press_all{
-	margin-top: 10%;
+	/* margin-top: 10%; */
+	padding-top: 3%;
 	display: flex;
 }
 
@@ -662,7 +666,6 @@ input:checked + .slider:before {
 	.tire{
 		display: inline;
 	}
-	
 
 	#dva{
 		margin-top: 5%;
