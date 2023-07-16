@@ -49,7 +49,7 @@ body {
   border-radius: 20px;
 	min-width: 100%;
   /* min-height: 75%; */
-  min-height: 78vh;
+  min-height: 88vh;
 	margin-top: auto;
   background-color: var(--sidebar-bg-color);
   margin-top: 13%;
@@ -191,6 +191,8 @@ body {
 		padding-bottom: 12px;
 	}
 
+	
+
 	.sidebar .search {
 		padding: 10px 0 10px 30px
 	}
@@ -237,11 +239,11 @@ body {
 	width: 30%;
 } */
 
+
+
 #val{
-	
-	width: 27%;
-	/* background-color:#2196F3; */
-	background-color: #f14c1a;
+	width: 29%;
+	background-color:#d34a20;
 	border-radius: 12px;
 }
 
@@ -249,7 +251,7 @@ body {
 	display: flex;
 	background-color:#f14c1a;
 	border-radius: 12px;
-	width: 87%;
+	width: 95%;
 }
 
 
@@ -257,7 +259,7 @@ body {
 
 #row1 div{
 	margin-top: 3%;
-	margin-left: 5%;
+	margin-left: 4%;
 	height: 100px;
 }
 
@@ -629,6 +631,9 @@ input:checked + .slider:before {
 	margin-left: 5%;
 }
 
+.p-4{
+	padding: 0;
+}
 
 
 
@@ -645,11 +650,14 @@ input:checked + .slider:before {
 
 
 
+.graph{
+	padding: 3%;
+}
 
 
-
-
-
+#myChart{
+	border-radius: 20px;
+}
 
 
 
@@ -701,12 +709,23 @@ input:checked + .slider:before {
 	}
 
 	#val{
-		width: 87%;
+		width: 90%;
 		height: 130%;
 	}
 
-	#row1 div{
-		margin-left: 7%;
+	#val2{
+		width: 90%;
+		height: 130%;
+	}
+
+	#row1{
+		margin-left: 1%;
+	}
+	#row2{
+		width: 107%;
+	}
+	.calendar{
+		width: 130%;
 	}
 
 	.black{
@@ -714,18 +733,19 @@ input:checked + .slider:before {
 		/* border-radius: 20px;
 		min-width: 100%; */
 		/* min-height: 75%; */
-		min-height: 130vh;
+		min-height: 140vh;
 		/* margin-top: auto; */
 		background-color: var(--sidebar-bg-color);
 		margin-top: 83%;
 	}
 
+
 	#wrapper{
 		margin-left: 14%;
 	}
+
 	.welcome{
-		margin-top: -20%;
-		
+		margin-top: -20%;	
 	}
 
 
@@ -751,7 +771,6 @@ input:checked + .slider:before {
 	}
 
 	.nav > .nav-header > .nav-title {
-  
 		display: inline-block;
 		font-size: 22px;
 		color: #fff;
