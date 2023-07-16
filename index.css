@@ -225,14 +225,17 @@ body {
 	margin-left: 2%;
 } */
 
-#firstt{
 
-	/* position: inherit; */
-	margin-top: auto;
-	/* min-height: 43em; */
-	/* min-height: 70vh; */
-	/* width: 63%; */
+/* 
+#firstt{
+	position: static;
+} */
+
+#first{
+	position: static;
 }
+
+
 
 /* .wel div{
 	margin: 2%;
@@ -267,10 +270,11 @@ body {
 }
 
 #row2 div{
-	margin-top: 7%;
+	margin-top: 3%;
 	margin-left: 7%;
 	height: 100px;
 }
+
 
 .welcome .content {
 	/* background-color: var(--dk-dark-bg); */
@@ -602,22 +606,33 @@ input:checked + .slider:before {
 
 .hum_all{
 	display: flex;
-	padding-top: 3%;
+	/* padding-top: 3%; */
 }
 
 
 .temp_all{
 	display: flex;
-	padding-top: 3%;
+	/* padding-top: 3%; */
 }
 
 .co2_all{
 	display: flex;
 }
 
+
+
 .tvoc_all{
 	display: flex;
-	margin: auto;
+	padding: 3%;
+}
+
+
+
+@media (min-width: 1600px){
+	.tvoc_all{
+		padding: 0;
+	}
+
 }
 
 .press_all{
@@ -693,16 +708,7 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 600px){
-	
-	/* .nav-title{
-		margin-left: 5%;
-		font-size: 10px;
-		padding: 0;
-	} */
 
-	/* .tvoc_all{
-		margin-top: -10%;
-	} */
 
 
 	.nav{
@@ -731,6 +737,11 @@ input:checked + .slider:before {
 	#row2{
 		width: 107%;
 	}
+
+	#row4{
+		width: 103%;
+	}
+
 	.calendar{
 		width: 130%;
 	}
@@ -740,7 +751,7 @@ input:checked + .slider:before {
 		/* border-radius: 20px;
 		min-width: 100%; */
 		/* min-height: 75%; */
-		height: 87%;
+		height: 85%;
 		/* margin-top: auto; */
 		background-color: var(--sidebar-bg-color);
 		margin-top: 83%;
@@ -752,7 +763,7 @@ input:checked + .slider:before {
 	}
 
 	.welcome{
-		margin-top: -20%;	
+		margin-top: -10%;	
 	}
 
 

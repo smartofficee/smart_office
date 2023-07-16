@@ -135,23 +135,9 @@
     height: 10px;
     border-top: 2px solid #eee;
   }
-  /* .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    left: 0px;
-  } */
-
-
-  /* .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  } */
-  
+  .nav > .nav-links {
+    display: none;
+  }
   
 }
       </style>
@@ -183,13 +169,15 @@
                   </div>
                   <div class="slovo2" style="margin-left: auto; margin-right: 10%;">
                     <div style="display: flex; height: 40%; font-size: 25px;">
-                      <p id="temperature-data" style="margin-left: auto;">0</p>
-                      <p style="margin-left: auto;"><sup><small>o</small></sup>C</p>
+                      <p id="temperature-data" style="margin-left: 40%;">0</p>
+                      <p style="margin-left:auto;"><sup><small>o</small></sup>C</p>
                     </div>
-                    <h5 style="font-size: 125%;">Temperature</h5>
+                    <h5>Temperature</h5>
                   </div>
                 </div>
               </div>
+
+
 
               <div id="val" style="height: 100%;">
                 <div class="hum_all">
@@ -199,7 +187,7 @@
                   <div class="slovo2" style="margin-left: auto; margin-right: 10%;">
                     <div style="display: flex; height: 40%; font-size: 25px;">
                       <p id="humidity-data" style="margin-left: auto;">0</p>
-                      <p style="margin-left: auto;">%</p>
+                      <p style="margin-left:auto;"><sup><small> </small></sup>%</p>
                     </div>
                     <h5>Humidity</h5>
                   </div>
@@ -238,7 +226,7 @@
             <h1 class="fs-3" id="fs2">Welcome to Smart-Techno</h1>
               <div class="row" id="row2">
                 <div id="val2" style="height: 100%;">
-                  <div class="co2_all" style="margin-top: 1%;">
+                  <div class="co2_all">
                     <div class="co2">
                       <img id="img3" style="height: 79%;" src="co2-svgrepo-com.svg" alt="">
                     </div>  
@@ -260,7 +248,6 @@
               <div class="row" id="row2">
                 <div id="val2" style="height: 100%;">
                   <div class="tvoc_all">
-
                     <div class="tvoc">
                       <img id="img3" style="height: 70%;" src="tvoc.svg" alt="">
                     </div>
@@ -276,48 +263,15 @@
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row" id="row4">
                 <div class="calendar" id="calendar-app">
                   <div class="calendar--day-view" id="day-view">
                     <span class="day-view-exit" id="day-view-exit">&times;</span>
                     <span class="day-view-date" id="day-view-date">MAY 29 2016</span>
                     <div class="day-view-content">
-                      <!-- <div class="day-highlight">
-                        You <span class="day-events" id="day-events">had no events for today</span>. &nbsp; <span tabindex="0" onkeyup="if(event.keyCode != 13) return; this.click();" class="day-events-link" id="add-event" data-date>Add a new event?</span>
-                      </div> -->
-                      <!-- <div class="day-add-event" id="add-day-event-box" data-active="false">
-                        <div class="row">
-                          <div class="half">
-                            <label class="add-event-label">
-                               Name of event
-                              <input type="text" class="add-event-edit add-event-edit--long" placeholder="New event" id="input-add-event-name">
-                             
-                            </label>
-                          </div>
-                          <div class="qtr">
-                            <label class="add-event-label">
-                          Start Time
-                              <input type="text" class="add-event-edit" placeholder="8:15" id="input-add-event-start-time" data-options="1,2,3,4,5,6,7,8,9,10,11,12" data-format="datetime">
-                              <input type="text" class="add-event-edit" placeholder="am" id="input-add-event-start-ampm" data-options="a,p,am,pm">
-                            </label>
-                          </div>
-                          <div class="qtr">
-                            <label class="add-event-label">
-                          End Time
-                              <input type="text" class="add-event-edit" placeholder="9" id="input-add-event-end-time" data-options="1,2,3,4,5,6,7,8,9,10,11,12" data-format="datetime">
-                              <input type="text" class="add-event-edit" placeholder="am" id="input-add-event-end-ampm" data-options="a,p,am,pm">
-                            </label>
-                          </div>
-                          <div class="half">
-                            <a onkeyup="if(event.keyCode != 13) return; this.click();" tabindex="0" id="add-event-save" class="event-btn--save event-btn">save</a>
-                            <a tabindex="0" id="add-event-cancel" class="event-btn--cancel event-btn">cancel</a>
-                          </div>
-                        </div>
+                      
                         
-                      </div> -->
-                      <!-- <div id="day-events-list" class="day-events-list">
-                        
-                      </div> -->
+          
                       
                     </div>
                   </div>
@@ -799,11 +753,10 @@ query.get()
   .calendar{
     color: #fff;
     margin: 10px auto;
-    margin-top: 7%;
+    margin-top: 3%;
     background: #1087d1;
     padding: 10px 10px 0px 10px;
     margin-left: 7%;
-    /* height: 325px; */
     width: 95%;
     border-radius: 20px;
     box-shadow: 0px 2px 6px rgba(2,2,2,0.2);
@@ -817,7 +770,6 @@ query.get()
   .calendar--day-view{
     position: absolute;
     border-radius: 3px;
-    /* top: -2.5%; */
     left: -2.5%;
     width: 100%;
     height: 100%;
@@ -825,10 +777,8 @@ query.get()
    box-shadow: 3px 12px 5px rgba(2,2,2,0.16);
     z-index: 2;
     overflow: hidden;
-    /* transform: scale(0.9) translate(30px,30px); */
     opacity: 0;
     visibility: hidden;
-    /*border-radius: 5px; */
     display: none;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -836,7 +786,6 @@ query.get()
   .day-view-content{
     color: #222;
     width: 100%;
-    /* padding-top: 55px; */
   }
   .day-highlight, .day-add-event{
     padding: 8px 10px;
@@ -860,12 +809,7 @@ query.get()
   .row .half{
     width: 100%;
   }
-  @media (max-width: 600px){
-    .calendar{
-      width: 115%;
-      margin-top: 10%;
-    }
-  }
+  
   @media (min-width: 800px){
     .row{
       flex-wrap: nowrap;
@@ -922,18 +866,19 @@ query.get()
     font-size: 18px;
     font-weight: 800;
   }
+
   .add-event-edit--error, input.add-event-edit--error{
     border-color: #ff5151;
     animation: shake 300ms 1 forwards;
   }
-  @keyframes shake {
+  /* @keyframes shake {
     20%, 60%{
       transform: translateX(4px);
     }
     40%, 80%{
       transform: translateX(-4px);
     }
-  }
+  } */
   input.add-event-edit::-webkit-input-placeholder {
      color: #fff;
   }
@@ -977,10 +922,7 @@ query.get()
   .event-btn--cancel:hover{
     box-shadow: 0px 2px 4px rgba(2,2,2,0.2);
   }
-  /* .add-event-btn:hover, .add.event-btn:focus{
-    background: #00258e;
-    box-shadow: 0px -1px 2px rgba(3,2,2,0.2);
-  } */
+ 
   .day-highlight .day-events-link{
     border-bottom: 2px solid #222;
     padding: 0;
