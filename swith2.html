@@ -8,12 +8,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <script src="index.js"></script>
-
-
     <link rel="stylesheet" href="switch2.css">
     <link rel="stylesheet" href="calendar.css">
-
-
   </head>
 
   <body>
@@ -24,10 +20,10 @@
           <a href="#"><img class="one" src="1.svg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img class="one" src="2.svg" alt=""></a>
+          <a href="index.html"><img class="one" src="2.svg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img class="one" src="3.svg" alt=""></a>
+          <a href="swith2.html"><img class="one" src="3.svg" alt=""></a>
         </li>
         <li>
           <a href="#"><img class="one" src="4.svg" alt=""></a>
@@ -151,112 +147,14 @@
           var formattedDate = dt.toLocaleDateString('en-US', options);
           document.getElementById('date-time').innerHTML = formattedDate;
           </script>
-
 <div class="welcome">
+  <div class="row" id="roow"  style="width: 100%; margin-left: 1%;">
+  <div id="firstt" class="col-md-6 mb-3 mb-lg-0" >
   <div id="first" class="content rounded-3 p-3" style="border-radius: 20px;">
     <h1 class="fs-3">Graph</h1>
-      <section class="statis mt-4 text-center">
-        <div class="row" id="row3">
-          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-            <div class="box p-3">
-              <i class="uil-eye"></i>
-              <label class="switch">
-                <input type="checkbox" id="l0">
-                <span class="slider round" id="slid"></span>
-              </label>
-              <p class="lead">Room 1</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-            <div class="box p-3">
-              <i class="uil-user"></i>
-              <label class="switch">
-                <input type="checkbox" id="l1">
-                <span class="slider round" id="slid"></span>
-              </label>
-              <p class="lead">Room 2</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-            <div class="box p-3">
-              <i class="uil-shopping-cart"></i>
-              <label class="switch">
-                <input type="checkbox" id="l2">
-                <span class="slider round" id="slid"></span>
-              </label>
-              <p class="lead">Room 3</p>
-            </div>
-          </div>
-          
-        </div>
-
-        <div class="row" id="row3" style="margin-top: 3%;">
-          <div class="col-md-6 col-lg-3">
-            <div class="box p-3">
-              <i class="uil-feedback"></i>
-              <label class="switch">
-                <input type="checkbox" id="l3">
-                <span class="slider round" id="slid"></span>
-              </label>
-              <p class="lead">Room 4</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-            <div class="box p-3">
-              <i class="uil-eye"></i>
-              <label class="switch">
-                <input type="checkbox" id="l4">
-                <span class="slider round" id="slid"></span>
-              </label>
-              <p class="lead">Room 5</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-            <div class="box p-3">
-              <i class="uil-user"></i>
-              <label class="switch">
-                <input type="checkbox" id="l5">
-                <span class="slider round" id="slid"></span>
-              </label>
-              <p class="lead">Room 6</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row" id="row3" style="margin-top: 3%;">
-          <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-            <div class="box p-3">
-              <i class="uil-shopping-cart"></i>
-              <label class="switch">
-                <input type="checkbox" id="l6">
-                <span class="slider round" id="slid"></span>
-              </label>
-              <p class="lead">Room 7</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="box p-3">
-              <i class="uil-feedback"></i>
-              <label class="switch">
-                <input type="checkbox" id="l7">
-                <span class="slider round" id="slid"></span>
-              </label>
-              <p class="lead">Room 8</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    
-  </div>
-
-  <div id="second" class="content rounded-3 p-3" style="border-radius: 20px;">
-    <h1 class="fs-3">Welcome to Smart-Techno</h1>
-    <section class="statis mt-4 text-center">
+    <section class="statis mt-4 mb-4  text-center">
       <div class="row" id="row3">
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="col-6 col-md-4 col-sm-6 col-lg-4 mb-4 mb-lg-0">
           <div class="box p-3">
             <i class="uil-eye"></i>
             <label class="switch">
@@ -266,8 +164,8 @@
             <p class="lead">Room 1</p>
           </div>
         </div>
-        
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
           <div class="box p-3">
             <i class="uil-user"></i>
             <label class="switch">
@@ -277,7 +175,7 @@
             <p class="lead">Room 2</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
           <div class="box p-3">
             <i class="uil-shopping-cart"></i>
             <label class="switch">
@@ -291,7 +189,7 @@
       </div>
 
       <div class="row" id="row3" style="margin-top: 3%;">
-        <div class="col-md-6 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
           <div class="box p-3">
             <i class="uil-feedback"></i>
             <label class="switch">
@@ -301,7 +199,7 @@
             <p class="lead">Room 4</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
           <div class="box p-3">
             <i class="uil-eye"></i>
             <label class="switch">
@@ -311,7 +209,7 @@
             <p class="lead">Room 5</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
           <div class="box p-3">
             <i class="uil-user"></i>
             <label class="switch">
@@ -324,10 +222,114 @@
       </div>
 
 
-      
+      <div class="row" id="row3" style="margin-top: 3%;">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-shopping-cart"></i>
+            <label class="switch">
+              <input type="checkbox" id="l6">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 7</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-feedback"></i>
+            <label class="switch">
+              <input type="checkbox" id="l7">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 8</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+  <div id="secondd"  class="col-md-6 mb-3 mb-lg-0" style="align-items: center;">
+  <div class="content rounded-3 p-3" style="border-radius: 20px;">
+    <h1 class="fs-3" id="fs2">Welcome to Smart-Techno</h1>
+    <section class="statis mt-4 mb-4 text-center" >
+      <div class="row" id="row3">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-eye"></i>
+            <label class="switch">
+              <input type="checkbox" id="l0">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 1</p>
+          </div>
+        </div>
+        
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-user"></i>
+            <label class="switch">
+              <input type="checkbox" id="l1">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 2</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-shopping-cart"></i>
+            <label class="switch">
+              <input type="checkbox" id="l2">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 3</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="row" id="row3" style="margin-top: 3%;">
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-feedback"></i>
+            <label class="switch">
+              <input type="checkbox" id="l3">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 4</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-eye"></i>
+            <label class="switch">
+              <input type="checkbox" id="l4">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 5</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+          <div class="box p-3">
+            <i class="uil-user"></i>
+            <label class="switch">
+              <input type="checkbox" id="l5">
+              <span class="slider round" id="slid"></span>
+            </label>
+            <p class="lead">Room 6</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+      
   </div>
+
+  </div>
+  
+  
+
+
+
 </div>
 
         

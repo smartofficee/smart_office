@@ -35,10 +35,10 @@
           <a href="#"><img class="one" src="1.svg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img class="one" src="2.svg" alt=""></a>
+          <a href="index.html"><img class="one" src="2.svg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img class="one" src="3.svg" alt=""></a>
+          <a href="swith2.html"><img class="one" src="3.svg" alt=""></a>
         </li>
         <li>
           <a href="#"><img class="one" src="4.svg" alt=""></a>
@@ -169,7 +169,7 @@
           </script>
 
         <div class="welcome">
-          <div class="row"  style="width: 100%; margin-left: 0.2rem;">
+          <div class="row"  style="width: 100%; margin-left: 0.2rem; margin-top: auto;">
           <div id="firstt" class="col-md-8 mb-3 mb-lg-0" >
           <div id="first" class="content rounded-3 p-3" style="border-radius: 20px;">
             <h1 class="fs-3">Graph</h1>
@@ -259,9 +259,9 @@
 
               <div class="row" id="row2">
                 <div id="val2" style="height: 100%;">
-                  <div class="tvoc_all" style="margin-top: 3%;">
+                  <div class="tvoc_all">
 
-                    <div class="co2">
+                    <div class="tvoc">
                       <img id="img3" style="height: 70%;" src="tvoc.svg" alt="">
                     </div>
 
@@ -282,10 +282,10 @@
                     <span class="day-view-exit" id="day-view-exit">&times;</span>
                     <span class="day-view-date" id="day-view-date">MAY 29 2016</span>
                     <div class="day-view-content">
-                      <div class="day-highlight">
+                      <!-- <div class="day-highlight">
                         You <span class="day-events" id="day-events">had no events for today</span>. &nbsp; <span tabindex="0" onkeyup="if(event.keyCode != 13) return; this.click();" class="day-events-link" id="add-event" data-date>Add a new event?</span>
-                      </div>
-                      <div class="day-add-event" id="add-day-event-box" data-active="false">
+                      </div> -->
+                      <!-- <div class="day-add-event" id="add-day-event-box" data-active="false">
                         <div class="row">
                           <div class="half">
                             <label class="add-event-label">
@@ -314,20 +314,16 @@
                           </div>
                         </div>
                         
-                      </div>
-                      <div id="day-events-list" class="day-events-list">
+                      </div> -->
+                      <!-- <div id="day-events-list" class="day-events-list">
                         
-                      </div>
-                      <div class="day-inspiration-quote" id="inspirational-quote">
-                        Every child is an artist.  The problem is how to remain an artist once he grows up. –Pablo Picasso
-                      </div>
+                      </div> -->
+                      
                     </div>
                   </div>
                   <div class="calendar--view" id="calendar-view">
                     <div class="cview__month">
-                      <span class="cview__month-last" id="calendar-month-last">Apr</span>
                       <span class="cview__month-current" id="calendar-month">May</span>
-                      <span class="cview__month-next" id="calendar-month-next">Jun</span>
                     </div>
                     <div class="cview__header">Sun</div>
                     <div class="cview__header">Mon</div>
@@ -575,9 +571,12 @@ function displayData(humidity, pressure, temperature) {
   const humidityContainer = document.getElementById('humidity-data');
   const pressureContainer = document.getElementById('pressure-data');
   const temperatureContainer = document.getElementById('temperature-data');
-  humidityContainer.textContent = humidity;
-  pressureContainer.textContent = pressure;
-  temperatureContainer.textContent = temperature;
+  // humidityContainer.textContent = humidity;
+  // pressureContainer.textContent = pressure;
+  // temperatureContainer.textContent = temperature;
+  humidityContainer.textContent = humidity.toFixed(0);
+  pressureContainer.textContent = pressure.toFixed(0);
+  temperatureContainer.textContent = temperature.toFixed(0);
 }
 
 
@@ -587,6 +586,7 @@ realtimeRef.on('value', (snapshot) => {
   const humidity = snapshot.child('humidity').val();
   const pressure = snapshot.child('pressure').val();
   const temperature = snapshot.child('temperature').val();
+
 
   console.log('humidity:', humidity);
   console.log('pressure:', pressure);
@@ -799,6 +799,7 @@ query.get()
   .calendar{
     color: #fff;
     margin: 10px auto;
+    margin-top: 7%;
     background: #0e6075;
     padding: 10px 10px 0px 10px;
     margin-left: 7%;
@@ -863,7 +864,6 @@ query.get()
     .calendar{
       width: 115%;
       margin-top: 10%;
-
     }
   }
   @media (min-width: 800px){
@@ -1079,13 +1079,13 @@ query.get()
     display: block;
     text-transform: initial;
   }
-  .calendar--day-view-active{
+  /* .calendar--day-view-active{
     animation: popIn 200ms 1 forwards;
     visibility: visible;
     display: flex;
     transition: visibility 0ms;
   
-  }
+  } */
   .calendar--view{
     /* margin-top: -15%; */
     display: flex;
@@ -1105,7 +1105,7 @@ query.get()
     text-transform: uppercase;
     display: flex;
     flex-wrap: nowrap;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-around;
   }
   .cview__month-last,.cview__month-next,.cview__month-current{
@@ -1120,10 +1120,10 @@ query.get()
   }
   
   .cview__month-current{
-    font-size: 22px;
+    font-size: 25px;
     cursor: default;
     animation: popIn 200ms 1 forwards;
-    transform: translateY(20px);
+    /* transform: translateY(20px); */
     opacity: 0;
     position: relative;
   }
