@@ -37,9 +37,10 @@ body {
 
 .log{
 	position: absolute;
-	/* bottom: 5%; */
+	bottom: 5%;
 	width: 40%;
-	margin-top: 500%;
+	/* margin-top: 500%; */
+
 }
 
 
