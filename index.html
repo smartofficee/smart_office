@@ -156,7 +156,7 @@
 
         <div class="welcome">
           <div class="row"  style="width: 100%; margin-left: 0.2rem; margin-top: auto;">
-          <div id="firstt" class="col-md-8 mb-3 mb-lg-0" >
+          <div id="firstt" class="col-md-8 mb-3 mb-lg-0 align-self-start" >
           <div id="first" class="content rounded-3 p-3" style="border-radius: 20px;">
             <h1 class="fs-3">Graph</h1>
             <div class="row" id="row1">
@@ -221,7 +221,7 @@
             </div>
           </div>
         </div>
-          <div id="secondd"  class="col-md-4 mb-4 mb-lg-0" style="align-items: center;">
+          <div id="secondd"  class="col-md-4 mb-4 mb-lg-0 align-self-start" style="align-items: center;">
           <div class="content rounded-3 p-3" style="border-radius: 20px;">
             <h1 class="fs-3" id="fs2">Welcome to Smart-Techno</h1>
               <div class="row" id="row2">
@@ -517,7 +517,7 @@ i,i::before{
 
 
 
-const refPath = 'Modem-1/BME-280-2';
+const refPath = 'Modem-1/BME-280-1';
 const realtimeRef = firebase.database().ref(refPath);
 
 // Функция для отображения данных на HTML-странице
@@ -563,7 +563,7 @@ setInterval(updateData, 1000);
 
 
 
-const refPath1 = 'modem-2/BME-280-2';
+const refPath1 = 'modem-2/BME-280';
 const realtimeRef1 = firebase.database().ref(refPath1);
 
 function displayData2(humidity2, pressure2, temperature2) {

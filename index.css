@@ -40,7 +40,6 @@ body {
 	bottom: 5%;
 	width: 40%;
 	/* margin-top: 500%; */
-
 }
 
 
@@ -95,10 +94,10 @@ body {
 	position: fixed;
 	background-color: var(--sidebar-bg-color);
 	width: var(--sidebar-width);
+	backface-visibility: hidden;
 	/* transition: all .3s ease-in-out; */
 	/* transform: translateX(0); */
 	/* z-index: 9999999; */
-	backface-visibility: hidden;
 }
 
 .sidebar .close-aside {
@@ -212,8 +211,10 @@ body {
 }
 
 #fs2{
-	margin-top: 2%;
+	padding: 5% 0% 4% 7%;
 }
+
+
 .welcome {
 	position: relative;
 	/* margin-left: 2%; */
@@ -227,13 +228,13 @@ body {
 } */
 
 
-/* 
-#firstt{
-	position: static;
+
+/* #firstt{
+	position:
 } */
 
 #first{
-	position: static;
+	/* position: static; */
 }
 
 
@@ -735,6 +736,7 @@ input:checked + .slider:before {
 	#row1{
 		margin-left: 1%;
 	}
+
 	#row2{
 		width: 107%;
 	}
