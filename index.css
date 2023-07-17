@@ -95,9 +95,9 @@ body {
 	position: fixed;
 	background-color: var(--sidebar-bg-color);
 	width: var(--sidebar-width);
-	transition: all .3s ease-in-out;
-	transform: translateX(0);
-	z-index: 9999999;
+	/* transition: all .3s ease-in-out; */
+	/* transform: translateX(0); */
+	/* z-index: 9999999; */
 }
 
 .sidebar .close-aside {
