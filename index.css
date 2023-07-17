@@ -70,7 +70,7 @@ body {
 #wrapper {
   /* background-color:rgb(29, 171, 214); */
   /* background: linear-gradient(#62bded, #148ed5); */
-	background: #1087d1;
+	background: #00274C;
   /* background: #446B5C; */
 	margin-left: var(--sidebar-width);
 	transition: all .3s ease-in-out;
@@ -249,13 +249,13 @@ body {
 
 #val{
 	width: 29%;
-	background-color:#d34a20;
+	background-color:#FF4500;
 	border-radius: 12px;
 }
 
 #val2{
 	display: flex;
-	background-color:#f14c1a;
+	background-color:#FF4500;
 	border-radius: 12px;
 	width: 95%;
 }
@@ -751,7 +751,7 @@ input:checked + .slider:before {
 		/* border-radius: 20px;
 		min-width: 100%; */
 		/* min-height: 75%; */
-		height: 85%;
+		height: 82%;
 		/* margin-top: auto; */
 		background-color: var(--sidebar-bg-color);
 		margin-top: 83%;

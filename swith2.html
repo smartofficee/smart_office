@@ -5,11 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="switch2.css">
-    <link rel="stylesheet" href="calendar.css">
+
   </head>
 
   <body>
@@ -139,7 +136,7 @@
           document.getElementById('date-time').innerHTML = formattedDate;
           </script>
 <div class="welcome">
-  <div class="row" id="roow"  style="width: 100%; margin-left: 1%;">
+  <div class="row" id="roow"  style="width: 100%; margin-left: 0.2rem;">
   <div id="firstt" class="col-md-6 mb-3 mb-lg-0" >
   <div id="first" class="content rounded-3 p-3" style="border-radius: 20px;">
     <h1 class="fs-3">Graph</h1>
@@ -414,7 +411,7 @@ i,i::before{
 
 
 
-  </body>
+
 
 
 
@@ -491,36 +488,10 @@ i,i::before{
 
 
 
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-  
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
   <script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const apiSwitch = document.getElementById("l0");
   var firebaseConfig = {
     apiKey: "AIzaSyA3txSt2Tm0q4XByth4ligkMqmsaWF7xuc",
@@ -634,7 +605,7 @@ const apiSwitch = document.getElementById("l0");
   }
   updateSwitch2();
   apiSwitch2.addEventListener("change", function() {
-    var firebaseRef = database.ref("master-1/relay/2");
+    var firebaseRef = database.ref("Master-1/Relay/2");
     var value = this.checked ? 0 : 1;
   
     firebaseRef.set(value)
@@ -772,6 +743,7 @@ const apiSwitch = document.getElementById("l0");
   setInterval(updateSwitch6, 1000);
 
 
+
   const apiSwitch7 = document.getElementById("l7");
   function updateSwitch7() {
     // Reference to the 'zero' value in the Firebase database
@@ -801,10 +773,11 @@ const apiSwitch = document.getElementById("l0");
 
   setInterval(updateSwitch7, 1000);
 
+</script>
 
 
 
-
+</body>
 
 
 
