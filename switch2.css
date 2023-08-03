@@ -759,6 +759,12 @@ input:checked + .slider:before {
 
 }
 
+@media (min-width: 1700px) {
+	.black{
+		min-height: 155%;
+	}
+}
+
 
 
 
