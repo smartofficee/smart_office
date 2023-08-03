@@ -639,7 +639,7 @@ input:checked + .slider:before {
 
 .press_all{
 	/* margin-top: 10%; */
-	padding-top: 3%;
+/* 	padding-top: 3%; */
 	display: flex;
 }
 
